@@ -2,7 +2,7 @@ const axios = require("axios");
 
 let filteredHSSCStations = [];
 
-async function getHSSCBusList() {
+async function updateHSSCBusList() {
   try {
     const response = await axios.get(
       "https://kingom.skku.edu/skkuapp/getBusData.do?route=2009&_=1685209241816"
@@ -44,10 +44,18 @@ async function getHSSCBusList() {
 
     filteredHSSCStations = updatedStations;
     console.log("Updated filteredHSSCStations: ", filteredHSSCStations);
-    return filteredHSSCStations;
   } catch (error) {
     console.error(error);
   }
+}
+
+// Initialize the automatic update every 10 seconds
+setInterval(updateHSSCBusList, 10000);
+
+// Function to get the HSSC Bus List, now just returns the stored data
+function getHSSCBusList() {
+  // console.log("Serving filteredHSSCStations: ", filteredHSSCStations);
+  return filteredHSSCStations;
 }
 
 module.exports = { getHSSCBusList };

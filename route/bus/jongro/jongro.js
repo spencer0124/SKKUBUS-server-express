@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 module.exports = router;
 
-const getHSSCBusList = require("./fetchhssc.js");
+const getJongroBusList = require("./fetchjongro.js");
 
-let HSSCStations = [
+let Jongrotations = [
   {
     stationName: "정차소(인문.농구장)",
     stationNumber: null,
@@ -99,7 +99,7 @@ let HSSCStations = [
 
 router.get("/v1/buslocation", async (req, res) => {
   // real
-  response = await getHSSCBusList.getHSSCBusList();
+  response = await getJongroBusList.getJongroBusList();
   res.json(response);
 
   // test
@@ -122,5 +122,5 @@ router.get("/v1/buslocation", async (req, res) => {
 });
 
 router.get("/v1/busstation", (req, res) => {
-  res.json(HSSCStations);
+  res.json(Jongrotations);
 });

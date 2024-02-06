@@ -14,6 +14,8 @@ const processBuildItem = (item) => {
       buildNm_kr: item.buildNm,
       buildNm_en: item.buildNmEng,
       buildNo: item.buildNo,
+      latitude: item.latitude,
+      longtitude: item.longtitude,
     },
     spaceInfo: {
       floorNm_kr: item.floorNm,

@@ -1,17 +1,20 @@
 const axios = require("axios");
 
+// 15 초마다 api를 요청하고, 정제하여 최종적으로 전달한 정보를 담을 변수
 let filteredHSSCStations = [];
 
+// api를 요청하고, 응답을 정제하여 filteredHSSCStations에 저장하는 함수
 async function updateHSSCBusList() {
   try {
     const response = await axios.get(
       "https://kingom.skku.edu/skkuapp/getBusData.do?route=2009&_=1685209241816"
+      // "http://skkubus-api-test.kro.kr"
     );
     const apiData = response.data.items;
 
     const currentTime = new Date();
 
-    const updatedStations = apiData
+    var updatedStations = apiData
       .filter((item) => item.carNumber)
       .map((apiItem) => {
         const existingStation = filteredHSSCStations.find(
@@ -42,19 +45,28 @@ async function updateHSSCBusList() {
         return stationToUpdate;
       });
 
+    // 600주년 기념관이고, 도착시간이 60초 넘은경우에 버스 삭제시키기!
+    updatedStations = updatedStations.filter(
+      (station) => !(station.sequence === "10" && station.estimatedTime > 30)
+    );
     filteredHSSCStations = updatedStations;
-    console.log("Updated filteredHSSCStations: ", filteredHSSCStations);
+    // console.log("Updated filteredHSSCStations: ", filteredHSSCStations);
   } catch (error) {
     console.error(error);
   }
 }
 
-// Initialize the automatic update every 10 seconds
-setInterval(updateHSSCBusList, 10000);
+// 10초마다 updateHSSCBusList 함수를 실행
+setInterval(
+  updateHSSCBusList,
+  15000
+  // 1000
+);
 
-// Function to get the HSSC Bus List, now just returns the stored data
+// filteredHSSCStations를 반환하는 함수
+// 업데이트 부분은 분리되어 있으므로 api call은 15초에 한번씩만 일어난다
 function getHSSCBusList() {
-  // console.log("Serving filteredHSSCStations: ", filteredHSSCStations);
+  console.log("Serving filteredHSSCStations: ", filteredHSSCStations);
   return filteredHSSCStations;
 }
 

@@ -75,8 +75,25 @@ router.get("/detail/:buildNo/:id", async (req, res) => {
 // option3
 router.get("/option3/:inputquery", async (req, res) => {
   try {
-    const mergedResults = await option3(req.params.inputquery);
-    res.json(mergedResults);
+    const option3_hssc = await option3(req.params.inputquery, 1);
+    const option3_nsc = await option3(req.params.inputquery, 2);
+    const option3_hsscCount = option3_hssc.length;
+    const option3_nscCount = option3_nsc.length;
+    const option3_totalCount = option3_hssc.length + option3_nsc.length;
+
+    res.json({
+      metaData: {
+        keyword: req.params.inputquery,
+        option3_totalCount: option3_totalCount,
+        option3_hsscCount: option3_hsscCount,
+        option3_nscCount: option3_nscCount,
+      },
+
+      option3Items: {
+        hssc: option3_hssc,
+        nsc: option3_nsc,
+      },
+    });
   } catch (error) {
     console.log(error);
     res.status(500).send("Error fetching data");

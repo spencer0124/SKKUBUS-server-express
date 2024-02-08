@@ -1,4 +1,5 @@
 const axios = require("axios");
+require("dotenv").config();
 
 // 15 초마다 api를 요청하고, 정제하여 최종적으로 전달한 정보를 담을 변수
 let filteredHSSCStations = [];
@@ -7,9 +8,10 @@ let filteredHSSCStations = [];
 async function updateHSSCBusList() {
   try {
     const response = await axios.get(
-      "https://kingom.skku.edu/skkuapp/getBusData.do?route=2009&_=1685209241816"
-      // "http://skkubus-api-test.kro.kr"
+      // process.env.API_HSSC_PROD
+      process.env.API_HSSC_DEV
     );
+
     const apiData = response.data.items;
 
     const currentTime = new Date();
@@ -49,6 +51,13 @@ async function updateHSSCBusList() {
     updatedStations = updatedStations.filter(
       (station) => !(station.sequence === "10" && station.estimatedTime > 30)
     );
+
+    // isLastBus 값을 모두 false로 넣어주기
+    updatedStations = updatedStations.map((station) => ({
+      ...station,
+      isLastBus: false,
+    }));
+
     filteredHSSCStations = updatedStations;
     // console.log("Updated filteredHSSCStations: ", filteredHSSCStations);
   } catch (error) {

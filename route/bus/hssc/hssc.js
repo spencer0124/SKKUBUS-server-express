@@ -158,8 +158,8 @@ router.get("/v1/busstation", async (req, res) => {
 
     const nextBus = busesInProximity[0];
 
-    console.log("iteration: ", station.sequence);
-    console.log("nextBus: ", nextBus);
+    // console.log("iteration: ", station.sequence);
+    // console.log("nextBus: ", nextBus);
 
     if (nextBus) {
       const remainingStations = station.sequence - parseInt(nextBus.sequence);
@@ -224,8 +224,8 @@ router.get("/v1/busstation", async (req, res) => {
       minute: "2-digit",
       hour12: true,
     }), // Formats the current time as "12:21 PM"
-    totalBuses: dynamicBusData.length, // The number of buses in dynamicBusData
+    totalBuses: dynamicBusData.length,
+    lastStationIndex: 9,
   };
-
   res.json({ metadata, HSSCStations });
 });

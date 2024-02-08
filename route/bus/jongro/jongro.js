@@ -2,125 +2,254 @@ const express = require("express");
 const router = express.Router();
 module.exports = router;
 
-const getJongroBusList = require("./fetchjongro.js");
+const getJongroInfo = require("./fetchjongro.js");
 
 let Jongrotations = [
   {
-    stationName: "정차소(인문.농구장)",
-    stationNumber: null,
+    sequence: "1",
+    stationName: "명륜새마을금고",
+    stationNumber: "01504",
     eta: "도착 정보 없음",
     isFirstStation: true,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.hsscBus",
+    busType: "BusType.jonroBus",
   },
   {
-    stationName: "학생회관(인문)",
-    stationNumber: null,
+    sequence: "2",
+    stationName: "서울국제고등학교",
+    stationNumber: "01512",
     eta: "도착 정보 없음",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.hsscBus",
+    busType: "BusType.jonroBus",
   },
   {
-    stationName: "정문(인문-하교)",
-    stationNumber: null,
+    sequence: "3",
+    stationName: "국민생활관",
+    stationNumber: "01521",
     eta: "도착 정보 없음",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.hsscBus",
+    busType: "BusType.jonroBus",
   },
   {
-    stationName: "혜화로터리(하차지점)",
-    stationNumber: null,
+    sequence: "4",
+    stationName: "혜화초등학교",
+    stationNumber: "01532",
     eta: "도착 정보 없음",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.hsscBus",
+    busType: "BusType.jonroBus",
   },
   {
-    stationName: "혜화역U턴지점",
-    stationNumber: null,
+    sequence: "5",
+    stationName: "혜화우체국",
+    stationNumber: "01543",
     eta: "도착 정보 없음",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.hsscBus",
+    busType: "BusType.jonroBus",
   },
   {
-    stationName: "혜화역(승차장)",
-    stationNumber: null,
+    sequence: "6",
+    stationName: "혜화역4번출구",
+    stationNumber: "01876",
     eta: "도착 정보 없음",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.hsscBus",
+    busType: "BusType.jonroBus",
   },
   {
-    stationName: "혜화로터리(경유)",
-    stationNumber: null,
+    sequence: "7",
+    stationName: "혜화역.서울대병원입구",
+    stationNumber: "01221",
     eta: "도착 정보 없음",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.hsscBus",
+    busType: "BusType.jonroBus",
   },
   {
-    stationName: "맥도날드 건너편",
-    stationNumber: null,
+    sequence: "8",
+    stationName: "방송통신대앞",
+    stationNumber: "01877",
+    eta: "도착 정보 없음",
+    isFirstStation: false,
+    isLastStation: false,
+    isRotationStation: true,
+    busType: "BusType.jonroBus",
+  },
+  {
+    sequence: "9",
+    stationName: "이화사거리",
+    stationNumber: "01886",
     eta: "도착 정보 없음",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.hsscBus",
+    busType: "BusType.jonroBus",
   },
+
   {
-    stationName: "정문(인문-등교)",
-    stationNumber: null,
+    sequence: "10",
+    stationName: "방송통신대.이화장",
+    stationNumber: "01219",
     eta: "도착 정보 없음",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.hsscBus",
+    busType: "BusType.jonroBus",
+  },
+
+  {
+    sequence: "11",
+    stationName: "혜화역.마로니에공원",
+    stationNumber: "01220",
+    eta: "도착 정보 없음",
+    isFirstStation: false,
+    isLastStation: false,
+    isRotationStation: false,
+    busType: "BusType.jonroBus",
+  },
+
+  {
+    sequence: "12",
+    stationName: "혜화역1번출구",
+    stationNumber: "01592",
+    eta: "도착 정보 없음",
+    isFirstStation: false,
+    isLastStation: false,
+    isRotationStation: false,
+    busType: "BusType.jonroBus",
+  },
+
+  {
+    sequence: "13",
+    stationName: "혜화동로터리",
+    stationNumber: "01226",
+    eta: "도착 정보 없음",
+    isFirstStation: false,
+    isLastStation: false,
+    isRotationStation: false,
+    busType: "BusType.jonroBus",
+  },
+
+  {
+    sequence: "14",
+    stationName: "성대입구",
+    stationNumber: "01697",
+    eta: "도착 정보 없음",
+    isFirstStation: false,
+    isLastStation: false,
+    isRotationStation: false,
+    busType: "BusType.jonroBus",
+  },
+
+  {
+    sequence: "15",
+    stationName: "성균관대정문",
+    stationNumber: "01615",
+    eta: "도착 정보 없음",
+    isFirstStation: false,
+    isLastStation: false,
+    isRotationStation: false,
+    busType: "BusType.jonroBus",
+  },
+
+  {
+    sequence: "16",
+    stationName: "600주년기념관",
+    stationNumber: "01616",
+    eta: "도착 정보 없음",
+    isFirstStation: false,
+    isLastStation: false,
+    isRotationStation: false,
+    busType: "BusType.jonroBus",
+  },
+
+  {
+    sequence: "17",
+    stationName: "성균관대운동장",
+    stationNumber: "01617",
+    eta: "도착 정보 없음",
+    isFirstStation: false,
+    isLastStation: false,
+    isRotationStation: false,
+    busType: "BusType.jonroBus",
   },
   {
-    stationName: "600주년 기념관",
-    stationNumber: null,
+    sequence: "18",
+    stationName: "학생회관",
+    stationNumber: "01618",
+    eta: "도착 정보 없음",
+    isFirstStation: false,
+    isLastStation: false,
+    isRotationStation: false,
+    busType: "BusType.jonroBus",
+  },
+
+  {
+    sequence: "19",
+    stationName: "성균관대학교",
+    stationNumber: "01722",
     eta: "도착 정보 없음",
     isFirstStation: false,
     isLastStation: true,
     isRotationStation: false,
-    busType: "BusType.hsscBus",
+    busType: "BusType.jonroBus",
   },
 ];
 
+// 현재 운영중인 버스 정보
 router.get("/v1/buslocation", async (req, res) => {
-  // real
-  response = await getJongroBusList.getJongroBusList();
-  res.json(response);
+  response = getJongroInfo.getJongroBusLocation();
 
-  // test
-  // res.json([
-  //   {
-  //     sequence: "1",
-  //     stationName: "몰라임마",
-  //     carNumber: "101",
-  //     eventDate: "상관없어 임마",
-  //     estimatedTime: 50,
-  //   },
-  //   {
-  //     sequence: "3",
-  //     stationName: "몰라임마",
-  //     carNumber: "1022",
-  //     eventDate: "상관없어 임마",
-  //     estimatedTime: 0,
-  //   },
-  // ]);
+  response = response.map((station) => ({
+    ...station,
+    isLastBus: false,
+  }));
+  // response = response.filter(
+  //   (item) => item.eta !== "정보 없음" && item.eta !== "출발대기"
+  // );
+
+  // last
+
+  res.json(response);
 });
 
-router.get("/v1/busstation", (req, res) => {
-  res.json(Jongrotations);
+// 전체 정류장 목록 (각 정류장별 Eta 포함)
+router.get("/v1/busstation", async (req, res) => {
+  response = getJongroInfo.getJongroBusList();
+
+  response2 = getJongroInfo.getJongroBusLocation();
+
+  const metadata = {
+    currentTime: new Date().toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    }), // Formats the current time as "12:21 PM"
+    totalBuses: response2.length,
+    lastStationIndex: 16,
+  };
+
+  Jongrotations.forEach((item) => {
+    const station = response.find(
+      (station) => station.stationName === item.stationName
+    );
+
+    if (station) {
+      item.eta = station.eta;
+    }
+  });
+
+  var HSSCStations = Jongrotations;
+
+  res.json({ metadata, HSSCStations });
 });

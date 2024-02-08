@@ -99,7 +99,7 @@ async function updateJongroBusList() {
     //     isFirstStation: true,
     //     isLastStation: false,
     //     isRotationStation: false,
-    //     busType: "BusType.jonroBus",
+    //     busType: "BusType.jonro07Bus",
     //   },
 
     apiData.forEach((item) => {

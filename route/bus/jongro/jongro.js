@@ -13,7 +13,7 @@ let Jongrotations = [
     isFirstStation: true,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
   {
     sequence: "2",
@@ -23,7 +23,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
   {
     sequence: "3",
@@ -33,7 +33,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
   {
     sequence: "4",
@@ -43,7 +43,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
   {
     sequence: "5",
@@ -53,7 +53,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
   {
     sequence: "6",
@@ -63,7 +63,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
   {
     sequence: "7",
@@ -73,7 +73,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
   {
     sequence: "8",
@@ -83,7 +83,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: true,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
   {
     sequence: "9",
@@ -93,7 +93,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
 
   {
@@ -104,7 +104,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
 
   {
@@ -115,7 +115,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
 
   {
@@ -126,7 +126,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
 
   {
@@ -137,7 +137,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
 
   {
@@ -148,7 +148,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
 
   {
@@ -159,7 +159,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
 
   {
@@ -170,7 +170,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
 
   {
@@ -181,7 +181,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
   {
     sequence: "18",
@@ -191,7 +191,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
 
   {
@@ -202,7 +202,7 @@ let Jongrotations = [
     isFirstStation: false,
     isLastStation: true,
     isRotationStation: false,
-    busType: "BusType.jonroBus",
+    busType: "BusType.jonro07Bus",
   },
 ];
 

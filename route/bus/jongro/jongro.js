@@ -482,6 +482,7 @@ router.get("/v1/busstation/:line", async (req, res) => {
 
   const metadata = {
     currentTime: new Date().toLocaleTimeString("en-US", {
+      timeZone: "Asia/Seoul",
       hour: "2-digit",
       minute: "2-digit",
       hour12: true,

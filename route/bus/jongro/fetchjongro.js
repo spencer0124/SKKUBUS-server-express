@@ -36,8 +36,8 @@ const stationMapping = {
 async function updateJongroBusLocation() {
   try {
     const response = await axios.get(
-      //   process.env.API_JONGRO07_LOC_PROD
-      process.env.API_JONGRO07_LOC_DEV
+      process.env.API_JONGRO07_LOC_PROD
+      //   process.env.API_JONGRO07_LOC_DEV
     );
 
     const apiData = response.data.msgBody.itemList;
@@ -82,8 +82,8 @@ async function updateJongroBusLocation() {
 async function updateJongroBusList() {
   try {
     const response = await axios.get(
-      //  process.env.API_JONGRO07_LIST_PROD
-      process.env.API_JONGRO07_LIST_DEV
+      process.env.API_JONGRO07_LIST_PROD
+      //   process.env.API_JONGRO07_LIST_DEV
     );
 
     const apiData = response.data.msgBody.itemList;

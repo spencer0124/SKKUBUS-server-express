@@ -72,7 +72,7 @@ async function updateJongroBusLocation(url, busnumber) {
     const apiData = response.data.msgBody.itemList;
     const moment = require("moment-timezone");
 
-    const currentTime = moment().tz("Asia/Seoul").format();
+    const currentTime = moment().tz("Asia/Seoul").toDate();
 
     // 초기화
     if (!filteredBusLocations[busnumber]) {

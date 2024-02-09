@@ -27,7 +27,7 @@ const stationRoute = require("./route/station/station.js");
 const mobileRoute = require("./route/mobile/mobile.js");
 app.use("/search", searchRoute);
 app.use("/bus/hssc", hsscRoute);
-app.use("/bus/jongro07", jongroRoute);
+app.use("/bus/jongro", jongroRoute);
 app.use("/station", stationRoute);
 app.use("/mobile/", mobileRoute);
 

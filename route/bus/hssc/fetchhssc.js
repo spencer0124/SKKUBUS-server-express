@@ -16,7 +16,7 @@ async function updateHSSCBusList() {
 
     const moment = require("moment-timezone");
 
-    const currentTime = moment().tz("Asia/Seoul").format();
+    const currentTime = moment().tz("Asia/Seoul").toDate();
 
     var updatedStations = apiData
       .filter((item) => item.carNumber)

@@ -65,6 +65,19 @@ function getBusList() {
         showAnimation: false,
         showNoticeText: false,
       },
+      {
+        title: "종로 02",
+        subtitle: "성균관대학교 ↔ 종각역YMCA",
+        busTypeText: "마을",
+        busTypeBgColor: AppColors.green,
+        pageLink: "/MainbusMain",
+        pageWebviewLink: null,
+        altPageLink: "https://namu.wiki/w/%EB%8F%84%EB%A7%9D%EC%B3%90",
+        useAltPageLink: false,
+        noticeText: null,
+        showAnimation: false,
+        showNoticeText: false,
+      },
     ],
   };
 }

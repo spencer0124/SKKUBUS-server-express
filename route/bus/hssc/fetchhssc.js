@@ -8,8 +8,8 @@ let filteredHSSCStations = [];
 async function updateHSSCBusList() {
   try {
     const response = await axios.get(
-      process.env.API_HSSC_PROD
-      // process.env.API_HSSC_DEV
+      // process.env.API_HSSC_PROD
+      process.env.API_HSSC_DEV
     );
 
     const apiData = response.data.items;

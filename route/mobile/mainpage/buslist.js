@@ -48,9 +48,9 @@ function getBusList() {
         pageWebviewLink: null,
         altPageLink: "https://namu.wiki/w/%EB%8F%84%EB%A7%9D%EC%B3%90",
         useAltPageLink: false,
-        noticeText: null,
+        noticeText: "3.11부터 자과캠 18시 출발 -> 18시 15분 출발로 조정",
         showAnimation: false,
-        showNoticeText: false,
+        showNoticeText: true,
       },
       {
         title: "종로 07",

@@ -22,11 +22,13 @@ const PORT = 3000;
 // Route
 const searchRoute = require("./route/search/search.js");
 const hsscRoute = require("./route/bus/hssc/hssc.js");
+const newhsscRoute = require("./route/bus/hssc_new/hssc_new.js");
 const jongroRoute = require("./route/bus/jongro/jongro.js");
 const stationRoute = require("./route/station/station.js");
 const mobileRoute = require("./route/mobile/mobile.js");
 app.use("/search", searchRoute);
-app.use("/bus/hssc", hsscRoute);
+app.use("/bus/hssc", newhsscRoute);
+app.use("/bus/hssc_new", newhsscRoute);
 app.use("/bus/jongro", jongroRoute);
 app.use("/station", stationRoute);
 app.use("/mobile/", mobileRoute);

@@ -27,7 +27,7 @@ function getBusList() {
       //   showNoticeText: true,
       // },
       {
-        title: "인사캠 셔틀",
+        title: "인사캠 셔틀버스",
         subtitle: "정차소(인문.농구장) ↔ 600주년 기념관",
         busTypeText: "성대",
         busTypeBgColor: AppColors.deepgreen,

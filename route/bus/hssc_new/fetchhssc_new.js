@@ -6,9 +6,15 @@ let filteredHSSCStations = [];
 
 // api에서 받아오는 정류장 이름이랑 실제 정류장 이름 매핑시켜주기
 const stopNameMapping = {
-  농구장정류소: "농구장 (셔틀버스정류소)",
   "혜화역 1번출구 셔틀버스 정류소": "혜화역 1번출구 (셔틀버스정류소)",
+  혜화동로터리: "혜화동로터리",
+  성균관대입구사거리: "성균관대입구사거리",
+  "문묘입구[정문]-등교": "정문",
+  "600주년기념관 앞-등교": "600주년기념관",
+  농구장정류소: "농구장 (셔틀버스정류소)",
+  "600주년기념관 앞-하교": "학생히관",
   "문묘입구[정문]-하교": "정문",
+  올림픽기념국민생활관: "올림픽기념국민생활관",
   "600주년기념관 앞-하교": "600주년기념관",
   서울혜화동우체국: "혜화동우체국",
 };
@@ -17,46 +23,54 @@ const stopNameMapping = {
 async function updateHSSCBusList() {
   try {
     const response = await axios.get(
-      //   process.env.API_HSSC_NEW_PROD
-      process.env.API_HSSC_NEW_DEV
+      process.env.API_HSSC_NEW_PROD
+      //   process.env.API_HSSC_NEW_DEV
     );
 
     const apiData = response.data;
     const moment = require("moment-timezone");
-
-    const currentTime = moment().tz("Asia/Seoul").toDate();
+    const currentTime = moment().tz("Asia/Seoul");
 
     // console.log("apiData: ", apiData);
 
-    filteredHSSCStations = apiData
+    const updatedData = apiData
       .map((item) => {
-        let newItem = {
+        const existingItem = filteredHSSCStations.find(
+          (station) =>
+            station.line_no === item.line_no && station.stop_no === item.stop_no
+        );
+
+        let eventDate;
+        if (existingItem && existingItem.eventDate) {
+          eventDateTime = moment(existingItem.eventDate, "YYYY-MM-DD HH:mm:ss");
+        } else {
+          eventDateTime = moment(item.get_date, "YYYY-MM-DD a h:mm:ss", "ko");
+        }
+
+        const timeDiff = (currentTime - eventDateTime) / 1000;
+        sequencetoint = parseInt(item.seq);
+        realsequence =
+          sequencetoint - 5 >= 0
+            ? sequencetoint - 5 + 1
+            : sequencetoint + 6 + 1;
+
+        return {
           ...item,
-          sequence: item.seq,
+          sequence: realsequence.toString(),
           stationName: stopNameMapping[item.stop_name] || item.stop_name,
-
           carNumber: "0000",
-          eventDate: moment(item.get_date, "YYYY-MM-DD a h:mm:ss", "ko").format(
-            "YYYY-MM-DD HH:mm:ss"
-          ),
-          estimatedTime: 30,
+          eventDate: eventDateTime.format("YYYY-MM-DD HH:mm:ss"),
+          estimatedTime: Math.round(Math.abs(timeDiff)),
           isLastBus: false,
+
+          line_no: item.line_no,
+          stop_no: item.stop_no,
+          get_date: item.get_date,
         };
-        // delete newItem.get_date;
-
-        // line_no와 stop_no는 eventDate를 업데이트해줄지 여부를 결정해주기 위해 꼭 필요함
-        // 따라서 삭제하지 말것!
-
-        // delete newItem.line_no;
-        // delete newItem.stop_no;
-        delete newItem.inout;
-        delete newItem.seq;
-        delete newItem.stop_name;
-        return newItem;
       })
       .filter((item) => {
         if (item.stationName === "농구장 (셔틀버스정류소)") {
-          const itemTime = moment(item.get_date, "YYYY-MM-DD a h:mm:ss", "ko");
+          const itemTime = moment(item.eventDate, "YYYY-MM-DD HH:mm:ss");
           const comparisonTime = moment()
             .tz("Asia/Seoul")
             .subtract(3, "minutes");
@@ -64,6 +78,8 @@ async function updateHSSCBusList() {
         }
         return true;
       });
+
+    filteredHSSCStations = updatedData;
 
     console.log("Filtered apiData: ", filteredHSSCStations);
   } catch (error) {
@@ -74,7 +90,7 @@ async function updateHSSCBusList() {
 // 15초마다 updateHSSCBusList 함수를 실행
 setInterval(
   updateHSSCBusList,
-  15000
+  10000
   // 1000
 );
 

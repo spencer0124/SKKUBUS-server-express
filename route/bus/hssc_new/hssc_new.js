@@ -7,7 +7,7 @@ const getHSSCBusList = require("./fetchhssc_new.js");
 let HSSCStations = [
   {
     sequence: 1,
-    stationName: "농구장 (셔틀버스정류소)",
+    stationName: "농구장",
     stationNumber: null,
     eta: "Basketball Court (Shuttle Bus Stop)",
     isFirstStation: true,
@@ -37,9 +37,9 @@ let HSSCStations = [
   },
   {
     sequence: 4,
-    stationName: "올림핌기념국민생활관",
+    stationName: "올림핌기념국민생활관 [하차전용]",
     stationNumber: null,
-    eta: "Olympic Hall",
+    eta: "Olympic Hall [Drop-off Only]",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
@@ -47,9 +47,9 @@ let HSSCStations = [
   },
   {
     sequence: 5,
-    stationName: "혜화동우체국",
+    stationName: "혜화동우체국 [하차전용]",
     stationNumber: null,
-    eta: "Hyehwa Postoffice",
+    eta: "Hyehwa Postoffice [Drop-off Only]",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
@@ -57,9 +57,9 @@ let HSSCStations = [
   },
   {
     sequence: 6,
-    stationName: "혜화동로터리",
+    stationName: "혜화동로터리 [미정차]",
     stationNumber: null,
-    eta: "Hyehwa Rotary",
+    eta: "Hyehwa Rotary [Non-stop]",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,
@@ -67,7 +67,7 @@ let HSSCStations = [
   },
   {
     sequence: 7,
-    stationName: "혜화역 1번출구 (셔틀버스정류소)",
+    stationName: "혜화역 1번출구",
     stationNumber: null,
     eta: "Hyehwa Station (Shuttle Bus Stop)",
     isFirstStation: false,
@@ -77,9 +77,9 @@ let HSSCStations = [
   },
   {
     sequence: 8,
-    stationName: "혜화동로터리",
+    stationName: "혜화동로터리 [미정차]",
     stationNumber: null,
-    eta: "Hyehwa Rotary",
+    eta: "Hyehwa Rotary [Non-stop]",
     isFirstStation: false,
     isLastStation: false,
     isRotationStation: false,

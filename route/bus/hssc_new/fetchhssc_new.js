@@ -75,6 +75,12 @@ async function updateHSSCBusList() {
             .tz("Asia/Seoul")
             .subtract(3, "minutes");
           return !itemTime.isBefore(comparisonTime);
+        } else {
+          const itemTime = moment(item.eventDate, "YYYY-MM-DD HH:mm:ss");
+          const comparisonTime = moment()
+            .tz("Asia/Seoul")
+            .subtract(10, "minutes");
+          return !itemTime.isBefore(comparisonTime);
         }
         return true;
       });

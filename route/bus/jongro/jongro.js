@@ -488,7 +488,7 @@ router.get("/v1/busstation/:line", async (req, res) => {
       hour12: true,
     }),
     totalBuses: response2 == undefined ? 0 : response2.length,
-    lastStationIndex: busLine === "07" ? 19 : 26,
+    lastStationIndex: busLine === "07" ? 18 : 25,
   };
 
   Jongrotations[busLine].forEach((item) => {

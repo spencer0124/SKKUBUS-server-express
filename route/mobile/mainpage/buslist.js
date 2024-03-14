@@ -61,10 +61,10 @@ function getBusList() {
         pageWebviewLink: null,
         altPageLink:
           "http://m.bus.go.kr/mBus/bus.bms?search=%EC%A2%85%EB%A1%9C07&searchType=B",
-        useAltPageLink: true,
-        noticeText: "이용자가 너무 많아 서버 증설작업중입니다",
+        useAltPageLink: false,
+        noticeText: null,
         showAnimation: false,
-        showNoticeText: true,
+        showNoticeText: false,
       },
       {
         title: "종로 02",
@@ -75,10 +75,10 @@ function getBusList() {
         pageWebviewLink: null,
         altPageLink:
           "http://m.bus.go.kr/mBus/bus.bms?search=%EC%A2%85%EB%A1%9C02&searchType=B",
-        useAltPageLink: true,
-        noticeText: "이용자가 너무 많아 서버 증설작업중입니다",
+        useAltPageLink: false,
+        noticeText: null,
         showAnimation: false,
-        showNoticeText: true,
+        showNoticeText: false,
       },
     ],
   };

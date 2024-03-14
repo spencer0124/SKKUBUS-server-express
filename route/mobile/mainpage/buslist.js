@@ -59,11 +59,12 @@ function getBusList() {
         busTypeBgColor: AppColors.green,
         pageLink: "/MainbusMain",
         pageWebviewLink: null,
-        altPageLink: "https://namu.wiki/w/%EB%8F%84%EB%A7%9D%EC%B3%90",
-        useAltPageLink: false,
-        noticeText: null,
+        altPageLink:
+          "http://m.bus.go.kr/mBus/bus.bms?search=%EC%A2%85%EB%A1%9C07&searchType=B",
+        useAltPageLink: true,
+        noticeText: "이용자가 너무 많아 서버 증설작업중입니다",
         showAnimation: false,
-        showNoticeText: false,
+        showNoticeText: true,
       },
       {
         title: "종로 02",
@@ -72,11 +73,12 @@ function getBusList() {
         busTypeBgColor: AppColors.green,
         pageLink: "/MainbusMain",
         pageWebviewLink: null,
-        altPageLink: "https://namu.wiki/w/%EB%8F%84%EB%A7%9D%EC%B3%90",
-        useAltPageLink: false,
-        noticeText: null,
+        altPageLink:
+          "http://m.bus.go.kr/mBus/bus.bms?search=%EC%A2%85%EB%A1%9C02&searchType=B",
+        useAltPageLink: true,
+        noticeText: "이용자가 너무 많아 서버 증설작업중입니다",
         showAnimation: false,
-        showNoticeText: false,
+        showNoticeText: true,
       },
     ],
   };

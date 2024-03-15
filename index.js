@@ -26,12 +26,14 @@ const newhsscRoute = require("./route/bus/hssc_new/hssc_new.js");
 const jongroRoute = require("./route/bus/jongro/jongro.js");
 const stationRoute = require("./route/station/station.js");
 const mobileRoute = require("./route/mobile/mobile.js");
+const adRoute = require("./route/ad/ad.js");
 app.use("/search", searchRoute);
 app.use("/bus/hssc", newhsscRoute);
 app.use("/bus/hssc_new", newhsscRoute);
 app.use("/bus/jongro", jongroRoute);
 app.use("/station", stationRoute);
 app.use("/mobile/", mobileRoute);
+app.use("/ad/", adRoute);
 
 // Start the server on the specified port
 app.listen(PORT, () => {

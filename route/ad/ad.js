@@ -5,7 +5,7 @@ const router = express.Router();
 function getAdList() {
   return {
     image: "https://i.imgur.com/K2JsUO6.png",
-    link: "instagram://skkubus.app",
+    link: "instagram://user?username=skkubus.app",
   };
 }
 

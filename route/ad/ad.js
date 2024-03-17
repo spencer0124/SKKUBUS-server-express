@@ -7,7 +7,8 @@ function getAdList() {
     image: "https://i.imgur.com/A620zXw.png",
     link: "instagram://user?username=skkubus.app",
     text: "스꾸버스 재학생 다운로드 41% 돌파 🔥",
-    image2: "https://i.imgur.com/niiVxOH.png",
+    image2: "",
+    // image2: "https://i.imgur.com/niiVxOH.png",
   };
 }
 

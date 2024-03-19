@@ -1,14 +1,21 @@
 const express = require("express");
 const router = express.Router();
+const { getData } = require("../poll/poll.js");
 
 // Define your function properly
 function getAdList() {
   return {
     image: "https://i.imgur.com/A620zXw.png",
-    link: "instagram://user?username=skkubus.app",
-    text: "스꾸버스 재학생 다운로드 41% 돌파 🔥",
     image2: "",
     // image2: "https://i.imgur.com/niiVxOH.png",
+    link: "instagram://user?username=skkubus.app",
+    showtext: true,
+    text: "스꾸버스 재학생 다운로드 41% 돌파 🔥",
+    showtext2: false,
+    text2: "👆 위에 있는 광고문구 투표하기",
+    // text1은 선택한 url로 단순이동
+    // text2는 /v1/notice에서 실행할 url을 받는 방식이다
+    // 또한 text2는 기기의 uuid를 가져올 수 있다
   };
 }
 

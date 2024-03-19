@@ -36,7 +36,7 @@ function getBusList() {
         altPageLink: "https://namu.wiki/w/%EB%8F%84%EB%A7%9D%EC%B3%90",
         noticeText: "역명/셔틀 정보를 더욱 정확하게 업데이트했어요",
         useAltPageLink: false,
-        showAnimation: true,
+        showAnimation: false,
         showNoticeText: true,
       },
       {
@@ -53,20 +53,6 @@ function getBusList() {
         showNoticeText: true,
       },
       {
-        title: "종로 07",
-        subtitle: "명륜새마을금고 ↔ 명륜새마을금고",
-        busTypeText: "마을",
-        busTypeBgColor: AppColors.green,
-        pageLink: "/MainbusMain",
-        pageWebviewLink: null,
-        altPageLink:
-          "http://m.bus.go.kr/mBus/bus.bms?search=%EC%A2%85%EB%A1%9C07&searchType=B",
-        useAltPageLink: false,
-        noticeText: null,
-        showAnimation: false,
-        showNoticeText: false,
-      },
-      {
         title: "종로 02",
         subtitle: "성균관대학교 ↔ 종각역YMCA",
         busTypeText: "마을",
@@ -80,6 +66,21 @@ function getBusList() {
         showAnimation: false,
         showNoticeText: false,
       },
+      {
+        title: "종로 07",
+        subtitle: "명륜새마을금고 ↔ 명륜새마을금고",
+        busTypeText: "마을",
+        busTypeBgColor: AppColors.green,
+        pageLink: "/MainbusMain",
+        pageWebviewLink: null,
+        altPageLink:
+          "http://m.bus.go.kr/mBus/bus.bms?search=%EC%A2%85%EB%A1%9C07&searchType=B",
+        useAltPageLink: false,
+        noticeText: null,
+        showAnimation: false,
+        showNoticeText: false,
+      },
+      
     ],
   };
 }

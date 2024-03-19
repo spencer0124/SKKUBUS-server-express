@@ -87,7 +87,7 @@ async function updateHSSCBusList() {
 
     filteredHSSCStations = updatedData;
 
-    console.log("Filtered apiData: ", filteredHSSCStations);
+    // console.log("Filtered apiData: ", filteredHSSCStations);
   } catch (error) {
     console.error(error);
   }

@@ -5,12 +5,13 @@ const { getData } = require("../poll/poll.js");
 // Define your function properly
 function getAdList() {
   return {
-    image: "https://i.imgur.com/A620zXw.png",
-    image2: "",
+    // image: "https://i.imgur.com/A620zXw.png",
+    image: "https://i.imgur.com/DPzoUzd.png",
+    image2: "https://i.imgur.com/o1upfLd.png",
     // image2: "https://i.imgur.com/niiVxOH.png",
-    link: "instagram://user?username=skkubus.app",
+    link: "https://forms.gle/XeSURws9nz4EGHtA9",
     showtext: true,
-    text: "스꾸버스 재학생 다운로드 41% 돌파 🔥",
+    text: "성대생이라면, 이 자리에 무료로 광고! (클릭)",
     showtext2: false,
     text2: "👆 위에 있는 광고문구 투표하기",
     // text1은 선택한 url로 단순이동

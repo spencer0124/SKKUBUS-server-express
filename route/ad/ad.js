@@ -9,9 +9,9 @@ function getAdList() {
     image: "https://i.imgur.com/DPzoUzd.png",
     image2: "https://i.imgur.com/o1upfLd.png",
     // image2: "https://i.imgur.com/niiVxOH.png",
-    link: "https://forms.gle/XeSURws9nz4EGHtA9",
+    link: "https://m.blog.naver.com/PostView.naver?blogId=naver_map&logNo=223397270040&proxyReferer=&noTrackingCode=true",
     showtext: true,
-    text: "성대생이라면, 이 자리에 무료로 광고! (클릭)",
+    text: "종로02/07/08 버스는 파업대상 아님",
     showtext2: false,
     text2: "👆 위에 있는 광고문구 투표하기",
     // text1은 선택한 url로 단순이동

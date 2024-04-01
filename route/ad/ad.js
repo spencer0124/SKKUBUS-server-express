@@ -6,12 +6,12 @@ const { getData } = require("../poll/poll.js");
 function getAdList() {
   return {
     // image: "https://i.imgur.com/A620zXw.png",
-    image: "https://i.imgur.com/DPzoUzd.png",
-    image2: "https://i.imgur.com/o1upfLd.png",
+    image: "https://i.imgur.com/yOcuOY8.png",
+    image2: "https://i.imgur.com/NZDt2eE.png",
     // image2: "https://i.imgur.com/niiVxOH.png",
-    link: "https://m.blog.naver.com/PostView.naver?blogId=naver_map&logNo=223397270040&proxyReferer=&noTrackingCode=true",
+    link: "https://brash-distance-4c3.notion.site/0c365ef74b5e4b2ea565ebc0f5a26fa3?pvs=74",
     showtext: true,
-    text: "종로02/07/08 버스는 파업대상 아님",
+    text: "스꾸버스 개발자 입대합니다🫡",
     showtext2: false,
     text2: "👆 위에 있는 광고문구 투표하기",
     // text1은 선택한 url로 단순이동

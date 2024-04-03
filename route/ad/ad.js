@@ -5,15 +5,15 @@ const { getData } = require("../poll/poll.js");
 // Define your function properly
 function getAdList() {
   return {
-    // image: "https://i.imgur.com/A620zXw.png",
-    image: "https://i.imgur.com/yOcuOY8.png",
-    image2: "https://i.imgur.com/NZDt2eE.png",
+    image: "https://i.imgur.com/A620zXw.png",
+    // image: "https://i.imgur.com/yOcuOY8.png",
+    image2: "https://i.imgur.com/Qd9bciY.jpeg",
     // image2: "https://i.imgur.com/niiVxOH.png",
-    link: "https://brash-distance-4c3.notion.site/0c365ef74b5e4b2ea565ebc0f5a26fa3?pvs=74",
+    link: "instagram://user?username=subs1955",
     showtext: true,
-    text: "스꾸버스 개발자 입대합니다🫡",
-    showtext2: false,
-    text2: "👆 위에 있는 광고문구 투표하기",
+    text: "매일 12:20~12:50 성대방송국 라디오♡",
+    showtext2: true,
+    text2: "👆 성대생이라면 이 자리, 무료 광고 (구글폼 작성)",
     // text1은 선택한 url로 단순이동
     // text2는 /v1/notice에서 실행할 url을 받는 방식이다
     // 또한 text2는 기기의 uuid를 가져올 수 있다

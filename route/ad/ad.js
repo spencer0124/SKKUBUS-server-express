@@ -12,7 +12,7 @@ function getAdList() {
     link: "instagram://user?username=subs1955",
     showtext: true,
     text: "매일 12:20~12:50 성대방송국 라디오♡",
-    showtext2: true,
+    showtext2: false,
     text2: "👆 성대생이라면 이 자리, 무료 광고 (구글폼 작성)",
     // text1은 선택한 url로 단순이동
     // text2는 /v1/notice에서 실행할 url을 받는 방식이다

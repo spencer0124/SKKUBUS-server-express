@@ -5,9 +5,7 @@ const { getData } = require("../poll/poll.js");
 // Define your function properly
 function getAdList() {
   return {
-    // 성대방송국
-    image: "https://i.imgur.com/zSrKJRO.jpeg",
-    // image: "https://i.imgur.com/A620zXw.png",
+    image: "https://i.imgur.com/A620zXw.png",
     // image: "https://i.imgur.com/yOcuOY8.png",
     image2: "https://i.imgur.com/Qd9bciY.jpeg",
     // image2: "https://i.imgur.com/niiVxOH.png",

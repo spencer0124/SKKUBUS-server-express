@@ -7,11 +7,12 @@ function getAdList() {
   return {
     image: "https://i.imgur.com/A620zXw.png",
     // image: "https://i.imgur.com/yOcuOY8.png",
-    image2: "https://i.imgur.com/Qd9bciY.jpeg",
+    // image2: "https://i.imgur.com/Qd9bciY.jpeg",
+    image2: "",
     // image2: "https://i.imgur.com/niiVxOH.png",
-    link: "instagram://user?username=subs1955",
+    link: "instagram://user?username=skkubus.app",
     showtext: true,
-    text: "매일 12:20~12:50 성대방송국 라디오♡",
+    text: "혜화역1출 올라가는 방향 공사중",
     showtext2: false,
     text2: "👆 성대생이라면 이 자리, 무료 광고 (구글폼 작성)",
     // text1은 선택한 url로 단순이동

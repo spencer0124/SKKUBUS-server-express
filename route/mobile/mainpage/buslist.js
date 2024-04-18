@@ -26,6 +26,20 @@ function getBusList() {
       //   showAnimation: true,
       //   showNoticeText: true,
       // },
+
+      {
+        title: "중간고사 인사캠 셔틀버스",
+        subtitle: "4.20. 오전 8시~12시",
+        busTypeText: "성대",
+        busTypeBgColor: AppColors.deepgreen,
+        pageLink: "/MainbusMain",
+        pageWebviewLink: null,
+        altPageLink: "https://blog.naver.com/spencer0124/223419586857",
+        noticeText: "매시 00분, 30분 2대씩 출발",
+        useAltPageLink: true,
+        showAnimation: true,
+        showNoticeText: true,
+      },
       {
         title: "인사캠 셔틀버스",
         subtitle: "정차소(인문.농구장) ↔ 600주년 기념관",
@@ -80,7 +94,6 @@ function getBusList() {
         showAnimation: false,
         showNoticeText: false,
       },
-      
     ],
   };
 }

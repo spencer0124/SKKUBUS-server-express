@@ -10,9 +10,10 @@ function getAdList() {
     // image2: "https://i.imgur.com/Qd9bciY.jpeg",
     image2: "",
     // image2: "https://i.imgur.com/niiVxOH.png",
-    link: "instagram://user?username=skkubus.app",
+    // link: "instagram://user?username=skkubus.app",
+    link: "https://blog.naver.com/spencer0124/223419586857",
     showtext: true,
-    text: "혜화역1출 올라가는 방향 공사중",
+    text: "4.20. 혜화역 셔틀 시범운행",
     showtext2: false,
     text2: "👆 성대생이라면 이 자리, 무료 광고 (구글폼 작성)",
     // text1은 선택한 url로 단순이동

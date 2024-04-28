@@ -4,7 +4,7 @@ module.exports = router;
 
 const getStationInfo = require("./fetchstation.js");
 
-const getHSSCBusList = require("../bus/hssc/fetchhssc.js");
+const getHSSCBusList = require("../bus/hssc_v1/fetchhssc_new.js");
 
 let HSSCStations = [
   {

@@ -5,15 +5,17 @@ const { getData } = require("../poll/poll.js");
 // Define your function properly
 function getAdList() {
   return {
-    image: "https://i.imgur.com/A620zXw.png",
+    image: "https://i.imgur.com/bk2cNZM.jpeg",
+    // image: "https://i.imgur.com/A620zXw.png",
     // image: "https://i.imgur.com/yOcuOY8.png",
     // image2: "https://i.imgur.com/Qd9bciY.jpeg",
-    image2: "",
+    image2: "https://i.imgur.com/j0oKDRr.jpeg",
+    // image2: "",
     // image2: "https://i.imgur.com/niiVxOH.png",
     // link: "instagram://user?username=skkubus.app",
-    link: "https://blog.naver.com/spencer0124/223419586857",
+    link: "https://map.naver.com/p/entry/place/1873388687?c=17.07,0,0,0,dh&placePath=/home",
     showtext: true,
-    text: "4.20. 혜화역 셔틀 시범운행",
+    text: "그때 그시절 그곳 그맛. 정문 앞에 있습니다.",
     showtext2: false,
     text2: "👆 성대생이라면 이 자리, 무료 광고 (구글폼 작성)",
     // text1은 선택한 url로 단순이동

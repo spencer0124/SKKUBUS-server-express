@@ -28,6 +28,19 @@ function getBusList() {
       // },
 
       {
+        title: "자과캠 대동제 인자셔틀",
+        subtitle: "인사캠 ↔ 자과캠",
+        busTypeText: "성대",
+        busTypeBgColor: AppColors.deepgreen,
+        pageLink: "/customwebview",
+        pageWebviewLink: "https://blog.naver.com/spencer0124/223444699024",
+        altPageLink: "https://namu.wiki/w/%EB%8F%84%EB%A7%9D%EC%B3%90",
+        useAltPageLink: false,
+        noticeText: "5월 16일, 17일 운행",
+        showAnimation: true,
+        showNoticeText: true,
+      },
+      {
         title: "인사캠 셔틀버스",
         subtitle: "정차소(인문.농구장) ↔ 600주년 기념관",
         busTypeText: "성대",

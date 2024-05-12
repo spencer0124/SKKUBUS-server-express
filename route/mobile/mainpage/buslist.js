@@ -26,6 +26,7 @@ function getBusList() {
       //   showAnimation: true,
       //   showNoticeText: true,
       // },
+
       {
         title: "자과캠 대동제 인자셔틀",
         subtitle: "인사캠 ↔ 자과캠",

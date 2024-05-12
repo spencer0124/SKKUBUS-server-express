@@ -5,17 +5,15 @@ const { getData } = require("../poll/poll.js");
 // Define your function properly
 function getAdList() {
   return {
-    image: "https://i.imgur.com/bk2cNZM.jpeg",
-    // image: "https://i.imgur.com/A620zXw.png",
+    image: "https://i.imgur.com/A620zXw.png",
     // image: "https://i.imgur.com/yOcuOY8.png",
-    // image2: "https://i.imgur.com/Qd9bciY.jpeg",
-    image2: "https://i.imgur.com/j0oKDRr.jpeg",
-    // image2: "",
+
+    image2: "",
     // image2: "https://i.imgur.com/niiVxOH.png",
     // link: "instagram://user?username=skkubus.app",
-    link: "https://map.naver.com/p/entry/place/1873388687?c=17.07,0,0,0,dh&placePath=/home",
+    link: "https://blog.naver.com/spencer0124/223444699024",
     showtext: true,
-    text: "그때 그시절 그곳 그맛. 정문 앞에 있습니다.",
+    text: "자과캠 대동제 인자셔틀 5월 16일, 17일 운행",
     showtext2: false,
     text2: "👆 성대생이라면 이 자리, 무료 광고 (구글폼 작성)",
     // text1은 선택한 url로 단순이동

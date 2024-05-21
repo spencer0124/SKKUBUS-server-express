@@ -5,7 +5,7 @@ const { getData } = require("../poll/poll.js");
 // Define your function properly
 function getAdList() {
   return {
-    image: "https://imgur.com/a/B0Z9f4F",
+    image: "https://i.imgur.com/UULWt9P.png",
     // image: "https://i.imgur.com/A620zXw.png",
     // image: "https://i.imgur.com/yOcuOY8.png",
 

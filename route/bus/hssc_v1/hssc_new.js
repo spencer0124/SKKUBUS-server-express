@@ -37,7 +37,7 @@ let HSSCStations = [
   },
   {
     sequence: 4,
-    stationName: "올림핌기념국민생활관 [하차전용]",
+    stationName: "올림픽기념국민생활관 [하차전용]",
     stationNumber: null,
     eta: "Olympic Hall [Drop-off Only]",
     isFirstStation: false,

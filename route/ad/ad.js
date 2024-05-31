@@ -5,16 +5,18 @@ const { getData } = require("../poll/poll.js");
 // Define your function properly
 function getAdList() {
   return {
+    image: "https://i.imgur.com/VEJpasQ.png",
     // image: "https://i.imgur.com/UULWt9P.png",
-    image: "https://i.imgur.com/A620zXw.png",
+    // image: "https://i.imgur.com/A620zXw.png",
     // image: "https://i.imgur.com/yOcuOY8.png",
 
     image2: "",
     // image2: "https://i.imgur.com/niiVxOH.png",
-    link: "instagram://user?username=skkubus.app",
+    // link: "instagram://user?username=skkubus.app",
+    link: "https://youtu.be/rameVU9T7dE?si=RArLhrPFjvv3gWo-",
     // link: "https://www.youtube.com/@subs_1955",
     showtext: true,
-    text: "종강까지 다들 화이팅 🤓👍",
+    text: "Ep.2 조승용 ‘스꾸버스’ 개발자 [언성히어로 2화]",
     showtext2: false,
     text2: "👆 성대생이라면 이 자리, 무료 광고 (구글폼 작성)",
     // text1은 선택한 url로 단순이동
